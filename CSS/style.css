@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.mainContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 384px;
+    grid-template-rows: 150px auto 150px;
+    grid-template-areas: "header header header header" "aside main main main" "footer footer footer footer";
+    padding: 20px;
+}
+
+header {
+    grid-area: header;
+}
+
+.headercontainer>.part1>img {
+    height: 100px;
+}
+
+.headercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.headercontainer .part2 select {
+    font-weight: 800;
+    border: none;
+    font-weight: 900;
+}
+
+.headercontainer .part2 input {
+    border: none;
+    font-weight: 800;
+    background-color: white;
+}
+
+.headercontainer .part3 input {
+    text-transform: uppercase;
+    padding: 5px 30px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.headercontainer .part3 input:active {
+    background-color: green;
+}
+
+.headercontainer .part2 {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* sidebar */
+
+aside {
+    grid-area: aside;
+    /* width: 23%; */
+}
+
+.asidecontianer .part1 ul li {
+    height: 100%;
+    list-style-type: none;
+    padding: 10px;
+    /* display: flex;
+    flex-direction:column;
+    justify-content: space-around; */
+}
+
+.asidecontianer .part1 {
+    height: 350px;
+    filter: drop-shadow(0px 0px 3px lightblue);
+    background-color: white;
+}
+
+.asidecontianer .firstchild {
+    background-color: red;
+    color: white;
+}
+
+.asidecontianer li:not(.firstchild):hover {
+    background-color: #d3d3d3;
+    border-left: 3px solid red;
+}
+
+
+/* aside container part 1 */
+
+.asidecontianer .part2 {
+    height: 450px;
+    background-color: white;
+    margin-top: 20px;
+    filter: drop-shadow(0px 0px 15px lightblue);
+}
+
+.asidecontianer .heading {
+    padding: 10px;
+    font-weight: 700;
+}
+
+.asidecontianer .part2Con {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.asidecontianer .part2 img {
+    height: 150px;
+    border-radius: 10px;
+}
+
+.asidecontianer .part2 .sizes {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.asidecontianer .part2 .sizes .small,
+.large,
+.medium {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.asidecontianer .part2 .sizes .small {
+    background-color: orangered;
+    font-weight: 600;
+    color: white;
+}
+
+.asidecontianer .part2 .rs {
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.asidecontianer .part2 p {
+    text-align: center;
+}
+
+.asidecontianer .part3 {
+    background-color: yellow;
+    height: 600px;
+    width: 100%;
+    margin-top: 20px;
+    background-size: contain;
+    background-position: center center;
+    background-image: url(https://i.pinimg.com/564x/12/ac/60/12ac606896dfc98f4806b7acababed67.jpg);
+}
+
+
+/* FOOTER CONTAINER */
+
+.footercontainer {
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.footercontainer>.part1>img {
+    height: 70px;
+}
+
+.footercontainer .part2 .firstchild {
+    color: black;
+    font-weight: 800;
+}
+
+.footercontainer {
+    width: 100%;
+    height: 100%;
+}
+
+.footercontainer .part3 .secondchild {
+    color: black;
+    font-weight: 800;
+}
+
+.footercontainer .part2 ul {
+    color: white;
+}
+
+.footercontainer .part3 ul {
+    color: white;
+}
+
+.footercontainer .part1 ul {
+    color: white;
+}
+
+.footercontainer .part3 h3 {
+    position: relative;
+    bottom: 10px;
+}
+
+main {
+    grid-area: main;
+    background-color: yellow;
+    margin-left: 40px;
+}
+
+main .mainCon1 {
+    display: flex;
+    background-color: black;
+}
+
+main .part1 {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: white;
+}
+
+main .part1Heading {
+    text-transform: uppercase;
+    background-color: orange;
+    padding: 8px 10px;
+}
+
+main .special {
+    font-size: 80px;
+    font-weight: 800;
+}
+
+main .mainCon1 input {
+    font-size: 20px;
+    background-color: orangered;
+    color: white;
+    padding: 10px 30px;
+}
+
+
+/* main img side bar */
+
+main .mainCon2 {
+    height: 300px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-areas: "img1 img2" "img1 img3";
+    gap: 10px;
+    color: white;
+}
+
+main .img1 {
+    grid-area: img1;
+    background-image: url(../images/biriyani.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+main .img2 {
+    grid-area: img2;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://i.pinimg.com/564x/a6/08/dc/a608dca35982e969d82c9fbde3ec52a7.jpg);
+}
+
+main .img3 {
+    grid-area: img3;
+    background-image: url(../images/leg-piece.jpg);
+}
+
+main .mainCon2 strong,
+p {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+main .mainCon3 {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.mainCon3 .heading {
+    background-color: orange;
+    width: 133px;
+    text-align: center;
+    padding: 5px 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+main .mainCon3 .para {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+main .mainCon3 .blackbox {
+    height: 10px;
+    background-color: black;
+    width: 100px;
+    border-radius: 10px;
+}
+
+main .mainCon3 .content {
+    text-align: center;
+}
+
+main .iconCon {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+main .iconCon img {
+    height: 40px;
+}
+
+main .firstimg {
+    border-bottom: 5px solid red;
+    padding-bottom: 10px;
+}
+
+main #firstimg {
+    height: 50px;
+}
